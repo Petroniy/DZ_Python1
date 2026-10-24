@@ -189,8 +189,7 @@ def format_report_line(movie):
 # Этап 5. Списки (задачи 12–13).
 def titles_sorted_by_rating(movies):
     """Вернуть исходные названия по убыванию рейтинга без изменения списка."""
-    sorted_movies = movies
-    sorted_movies.sort(key=lambda movie: movie["rating"], reverse=True)
+    sorted_movies = sorted(movies, key=lambda movie: movie["rating"], reverse=True)
     return [movie["title"] for movie in sorted_movies]
 
 
