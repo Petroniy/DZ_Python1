@@ -214,9 +214,9 @@ def count_by_genre(movies):
 def actor_filmography(movies):
     """Собрать списки исходных названий фильмов для каждого актера."""
     filmography = {}
-    titles = []
     for movie in movies:
         for actor in movie["actors"]:
+            titles = filmography.get(actor, [])
             titles.append(movie["title"])
             filmography[actor] = titles
     return filmography
