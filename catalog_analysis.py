@@ -207,7 +207,7 @@ def count_by_genre(movies):
     counts = {}
     for movie in movies:
         for genre in movie["genres"]:
-            counts[genre] = counts[genre] + 1
+            counts[genre] = counts.get(genre, 0) + 1
     return counts
 
 
