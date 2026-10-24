@@ -141,7 +141,7 @@ def print_non_comedy_titles(movies):
 def find_first_masterpiece(movies):
     """Напечатать и вернуть первый фильм с рейтингом строго выше 9.0."""
     index = 0
-    while index < len(movies)
+    while index < len(movies):
         if movies[index]["rating"] > 9.0:
             break
         index += 1
