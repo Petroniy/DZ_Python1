@@ -256,7 +256,7 @@ def build_report(movies):
     print("\nФильмов по жанрам:")
     genre_counts = count_by_genre(movies)
     sorted_genres = sorted(
-        genre_counts, key=lambda genre: (genre_counts[genre], genre)
+        genre_counts, key=lambda genre: (-genre_counts[genre], genre)
     )
     for genre in sorted_genres:
         print(f"  {genre} — {genre_counts[genre]}")
