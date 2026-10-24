@@ -248,9 +248,8 @@ def build_report(movies):
     print(f"Средний возраст фильмов: {catalog_age_stats(movies)[2]} лет")
 
     print("\nТоп-3 фильма:")
-    movies_by_title = {movie["title"]: movie for movie in movies}
-    for title, _ in top_n_by_rating(movies):
-        movie = movies_by_title[title]
+    sorted_movies = sorted(movies, key=lambda movie: movie["rating"], reverse=True)
+    for movie in sorted_movies[:3]:
         print(f"  {format_report_line(movie)}")
 
     print("\nФильмов по жанрам:")
