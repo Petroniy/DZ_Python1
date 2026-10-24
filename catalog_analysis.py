@@ -127,3 +127,37 @@ def decade_label(year):
             return "недавние"
         case _:
             return "старые"
+
+
+# Этап 3. Циклы (задачи 6–8).
+def print_non_comedy_titles(movies):
+    """Напечатать исходные названия всех фильмов без жанра comedy."""
+    for movie in movies:
+        if "comedy" in movie["genres"]:
+            continue
+        print(movie["title"])
+
+
+def find_first_masterpiece(movies):
+    """Напечатать и вернуть первый фильм с рейтингом строго выше 9.0."""
+    index = 0
+    while index < len(movies)
+        if movies[index]["rating"] > 9.0:
+            break
+        index += 1
+    else:
+        print("Шедевров не найдено")
+        return None
+
+    movie = movies[index]
+    print(movie["title"])
+    return movie
+
+
+def count_long_movies(movies, threshold=120):
+    """Посчитать фильмы, чья длительность строго больше порога."""
+    count = 0
+    for movie in movies:
+        if movie["duration_min"] >= threshold:
+            count += 1
+    return count
