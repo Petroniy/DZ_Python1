@@ -105,3 +105,25 @@ def catalog_age_stats(movies, current_year=2026):
 def duration_in_hours(minutes):
     """Перевести минуты в строку с часами и оставшимися минутами."""
     return f"{minutes // 60}ч {minutes % 60}м"
+
+
+# Этап 2. Условия и match (задачи 4–5).
+def rating_tier(rating):
+    """Определить категорию рейтинга без пропусков на границах."""
+    if rating >= 9:
+        return "шедевр"
+    elif rating >= 7:
+        return "хорошо"
+    else:
+        return "средне" if rating >= 5 else "слабо"
+
+
+def decade_label(year):
+    """Определить группу фильма по году выпуска через match."""
+    match year:
+        case _ if year > 2020:
+            return "новые"
+        case _ if 2015 <= year <= 2020:
+            return "недавние"
+        case _:
+            return "старые"
