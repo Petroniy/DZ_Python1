@@ -1,7 +1,6 @@
 [project]
 name = "dz-catalog-analysis"
 version = "0.1.0"
-description = "Movie catalog analysis using core Python constructs"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
