@@ -158,6 +158,6 @@ def count_long_movies(movies, threshold=120):
     """Посчитать фильмы, чья длительность строго больше порога."""
     count = 0
     for movie in movies:
-        if movie["duration_min"] >= threshold:
+        if movie["duration_min"] > threshold:
             count += 1
     return count
